@@ -1,11 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Lienes Meteo App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-info-search">
+          <h1 class="weather-app-city" id="city-search-one"></h1>
+          <form class="search-form" id="city-search-form">
+            <input
+              type="text"
+              placeholder="Enter a city ..."
+              class="search-form-input"
+              autofocus="on"
+              required
+              id="city-search-input"
+            />
+            <input type="submit" value="Submit" class="search-form-button" />
+          </form>
+        </div>
+      </header>
+      <main>
+        <div class="current-report">
+          <div>
+            <h2 class="weather-app-city">
+              <small>Currently in</small> <span id="city-search-two"></span>
+            </h2>
+            <p>
+              <span id="current-date-time"></span>
+              <br />
+              <span id="condition-description"></span>
+              <br />
+              Humidity:
+              <strong><span id="current-humidity"></span>%</strong> Wind:
+              <strong><span id="current-wind-speed"> </span> m/sec</strong>
+            </p>
+          </div>
+          <div class="current-report-stats-container">
+            <div id="current-stats-icon" class="current-stats-icon"></div>
+            <div class="current-stats-value" id="current-stats-value"></div>
+            <div class="current-stats-unit" id="current-stats-unit">°C</div>
+          </div>
+        </div>
+      </main>
+      <div class="weather-forecast">
+        <h4>5-day forecast - <span>coming soon</span></h4>
+        <div class="row day-one">
+          <div class="col-sm-2">Fri</div>
+          <div class="col-sm-2">0°C</div>
+          <div class="col-sm-2">☁</div>
+          <div class="col-sm-2">clouds</div>
+        </div>
+        <div class="row day-two">
+          <div class="col-sm-2">Sat</div>
+          <div class="col-sm-2">1°C</div>
+          <div class="col-sm-2">☁</div>
+          <div class="col-sm-2">clouds</div>
+        </div>
+        <div class="row day-three">
+          <div class="col-sm-2">Sun</div>
+          <div class="col-sm-2">0°C</div>
+          <div class="col-sm-2">☁</div>
+          <div class="col-sm-2">clouds</div>
+        </div>
+        <div class="row day-four">
+          <div class="col-sm-2">Mon</div>
+          <div class="col-sm-2">-1°C</div>
+          <div class="col-sm-2">❄</div>
+          <div class="col-sm-2">snow</div>
+        </div>
+        <div class="row day-five">
+          <div class="col-sm-2">Tues</div>
+          <div class="col-sm-2">0°C</div>
+          <div class="col-sm-2">☁</div>
+          <div class="col-sm-2">clouds</div>
+        </div>
+      </div>
+      <footer>
+        <small>
+          <div class="footer-element">
+            Coded with love by
+            <a href="https://github.com/LieneV-D" target="_blank"
+              >Liene Vecvagare</a
+            >
+            ❤. This code is open-sourced on
+            <a
+              href="https://github.com/LieneV-D/lienes-meteo-app"
+              target="_blank"
+              >GitHub</a
+            >
+            and is hosted on
+            <a href="https://lienes-meteo-app.netlify.app/" target="_blank"
+              >Netlify</a
+            >
+          </div>
+        </small>
+      </footer>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
 </html>
