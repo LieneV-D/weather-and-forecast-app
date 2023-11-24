@@ -1,0 +1,96 @@
+body {
+  background-image: url("mountains.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+a {
+  color: rgb(250, 0, 122);
+  font-weight: bold;
+}
+
+.weather-forecast,
+.current-report,
+.header-info-search {
+  background-color: white;
+  margin: 20px auto;
+  padding: 30px;
+  max-width: 700px;
+  border-radius: 20px;
+  box-shadow: 0 30px 50px grey;
+  font-family: "Roboto Mono", monospace;
+}
+.current-report,
+.header-info-search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form-input {
+  border-radius: 10px;
+  width: 70%;
+  padding: 4px 6px;
+}
+.search-form-button {
+  border-radius: 10px;
+
+  padding: 4px 6px;
+}
+
+.weather-app-city {
+  margin: 0;
+}
+h1 {
+  font-size: 60px;
+  line-height: 60px;
+  opacity: 1;
+}
+h4 span {
+  color: rgb(250, 0, 122);
+}
+.current-report-stats-container {
+  display: flex;
+}
+.current-stats-icon {
+  font-size: 40px;
+  margin-top: 10px;
+}
+.current-stats-value {
+  font-size: 80px;
+  font-weight: bold;
+}
+.current-stats-unit {
+  margin-top: 30px;
+}
+.day-one,
+.day-two,
+.day-three,
+.day-four,
+.day-five {
+  padding: 15px;
+  opacity: 0.75;
+  margin: 3px;
+}
+.day-one:hover,
+.day-two:hover,
+.day-three:hover,
+.day-four:hover,
+.day-five:hover {
+  opacity: 1;
+  padding: 25px;
+  cursor: pointer;
+  border: solid;
+  border-width: 2px;
+  border-radius: 20px;
+}
+.footer-element {
+  background-color: white;
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 700px;
+  border-radius: 20px;
+  box-shadow: 0 30px 50px grey;
+  font-family: "Roboto Mono", monospace;
+}
