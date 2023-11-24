@@ -57,6 +57,14 @@ iframe {
   margin-left: 203px;
   margin-right: 150px;
 }
+.spotify-player {
+  body {
+    max-width: 60px;
+
+    gap: 1rem;
+  }
+}
+
 .current-report-stats-container {
   display: flex;
 }
