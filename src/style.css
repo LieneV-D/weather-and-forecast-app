@@ -50,6 +50,12 @@ h1 {
 h4 span {
   color: rgb(250, 0, 122);
 }
+
+iframe {
+  margin: 20px auto;
+  margin-left: 200px;
+  margin-right: 150px;
+}
 .current-report-stats-container {
   display: flex;
 }
