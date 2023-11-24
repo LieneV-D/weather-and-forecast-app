@@ -46,14 +46,15 @@ h1 {
   font-size: 60px;
   line-height: 60px;
   opacity: 1;
+  margin-top: 0;
 }
 h4 span {
   color: rgb(250, 0, 122);
 }
 
 iframe {
-  margin: 20px auto;
-  margin-left: 200px;
+  margin: 10px auto;
+  margin-left: 203px;
   margin-right: 150px;
 }
 .current-report-stats-container {
