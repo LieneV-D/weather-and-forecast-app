@@ -76,3 +76,22 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
   const callback = (EmbedController) => {};
   IFrameAPI.createController(element, options, callback);
 };
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thur", "Fri", "Sat", "Sun", "Mon", "Tues", "Wed"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="row day-one">
+            <div class="col-sm-2">${day}</div>
+            <div class="col-sm-3">0°C</div>
+            <div class="col-sm-2">5 km/h</div>
+            <div class="col-sm-2">☁</div>
+            <div class="col-sm-2">clouds</div>
+          </div>`;
+  });
+  forecastElement.innerHTML = forecastHtml;
+}
+displayForecast();

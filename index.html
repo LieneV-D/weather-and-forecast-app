@@ -18,22 +18,16 @@
     />
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    <script
+      src="https://open.spotify.com/embed/iframe-api/v1"
+      allow="encrypted-media"
+      async
+    ></script>
 
     <title>Lienes Meteo App</title>
   </head>
   <body>
     <div class="container">
-     <!-- <iframe
-        style="border-radius: 12px"
-        src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4wta20PHgwo?utm_source=generator&theme=0"
-        width="63%"
-        height="152"
-        frameborder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      ></iframe> -->
       <div id="embed-iframe" class="spotify-player"></div>
 
       <header>
@@ -76,38 +70,9 @@
         </div>
       </main>
 
-      <div class="weather-forecast">
-        <h4>5-day forecast - <span>coming soon</span></h4>
-        <div class="row day-one">
-          <div class="col-sm-2">Fri</div>
-          <div class="col-sm-2">0°C</div>
-          <div class="col-sm-2">☁</div>
-          <div class="col-sm-2">clouds</div>
-        </div>
-        <div class="row day-two">
-          <div class="col-sm-2">Sat</div>
-          <div class="col-sm-2">1°C</div>
-          <div class="col-sm-2">☁</div>
-          <div class="col-sm-2">clouds</div>
-        </div>
-        <div class="row day-three">
-          <div class="col-sm-2">Sun</div>
-          <div class="col-sm-2">0°C</div>
-          <div class="col-sm-2">☁</div>
-          <div class="col-sm-2">clouds</div>
-        </div>
-        <div class="row day-four">
-          <div class="col-sm-2">Mon</div>
-          <div class="col-sm-2">-1°C</div>
-          <div class="col-sm-2">❄</div>
-          <div class="col-sm-2">snow</div>
-        </div>
-        <div class="row day-five">
-          <div class="col-sm-2">Tues</div>
-          <div class="col-sm-2">0°C</div>
-          <div class="col-sm-2">☁</div>
-          <div class="col-sm-2">clouds</div>
-        </div>
+      <div class="weather-forecast-container">
+        <h4>7-day forecast</h4>
+        <div id="forecast"></div>
       </div>
       <footer>
         <small>
@@ -123,9 +88,7 @@
               >GitHub</a
             >
             and is hosted on
-            <a href="https://lienes-meteo-app.netlify.app/" target="_blank"
-              >Netlify</a
-            >
+            <a href="#" target="_blank">Netlify</a>
           </div>
         </small>
       </footer>
