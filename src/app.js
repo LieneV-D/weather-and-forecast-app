@@ -20,6 +20,7 @@ function updateWeather(response) {
 
   let iconElement = document.querySelector("#current-stats-icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
+  getForecastData(response.data.city);
 }
 
 function capitalizeFirstLetter(string) {
@@ -77,7 +78,16 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
   IFrameAPI.createController(element, options, callback);
 };
 
-function displayForecast() {
+function getForecastData(city) {
+  let apiKeyForecast = "23e75f7acb80e43d1aa43c2eod7017bt";
+  let apiUrlForecast = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKeyForecast}&units=metric`;
+  axios.get(apiUrlForecast).then(displayForecast);
+  console.log(apiUrlForecast);
+}
+
+
+function displayForecast(response) {
+  console.log(response);
   let forecastElement = document.querySelector("#forecast");
   let days = ["Thur", "Fri", "Sat", "Sun", "Mon", "Tues", "Wed"];
   let forecastHtml = "";
