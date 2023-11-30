@@ -29,6 +29,10 @@ a {
   justify-content: space-between;
 }
 
+.header-info-search {
+  margin-top: 3px;
+}
+
 .search-form-input {
   border-radius: 10px;
   width: 70%;
@@ -97,7 +101,7 @@ iframe {
 .day-five:hover {
   opacity: 1;
   padding: 25px;
-  /*transform: scale(1.1);*/
+
   cursor: pointer;
   border: solid;
   border-width: 2px;

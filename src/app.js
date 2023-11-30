@@ -75,7 +75,7 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
     uri: "spotify:playlist:37i9dQZF1DWWR73B3Bnjfh",
   };
 
-  const callback = (EmbedController) => {};
+  const callback = () => {};
   IFrameAPI.createController(element, options, callback);
 };
 
