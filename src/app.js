@@ -72,7 +72,7 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
   const options = {
     width: "63%",
     height: "90",
-    uri: "spotify:playlist:37i9dQZF1DX4wta20PHgwo",
+    uri: "spotify:playlist:37i9dQZF1DWWR73B3Bnjfh",
   };
 
   const callback = (EmbedController) => {};
