@@ -85,23 +85,30 @@ function getForecastData(city) {
   console.log(apiUrlForecast);
 }
 
+function formatDayForForecast(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
 
 function displayForecast(response) {
-  console.log(response);
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Thur", "Fri", "Sat", "Sun", "Mon", "Tues", "Wed"];
+
   let forecastHtml = "";
-  days.forEach(function (day) {
+  response.data.daily.forEach(function (day) {
     forecastHtml =
       forecastHtml +
       `<div class="row day-one">
-            <div class="col-sm-2">${day}</div>
-            <div class="col-sm-3">0°C</div>
-            <div class="col-sm-2">5 km/h</div>
-            <div class="col-sm-2">☁</div>
-            <div class="col-sm-2">clouds</div>
+            <div class="col-sm-2">${formatDayForForecast(day.time)}</div>
+            <div class="col-sm-3"><strong>${Math.round(
+              day.temperature.maximum
+            )}°C</strong>|${Math.round(day.temperature.minimum)}°C</div>
+            <div class="col-sm-3">${day.wind.speed}m/sec</div>
+            <div class="col-sm-2"><img src="${
+              day.condition.icon_url
+            }" class="icon-url"/></div>
+            <div class="col-sm-2">${day.condition.description}</div>
           </div>`;
   });
   forecastElement.innerHTML = forecastHtml;
 }
-displayForecast();
